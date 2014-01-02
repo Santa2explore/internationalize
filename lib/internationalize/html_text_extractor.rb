@@ -4,7 +4,7 @@ module Internationalize
     SKIP_INLINE_TAG = [/<script>(.*?)<\/script>/i,/<%(.*?)%>/,/<(.*?)>/,/<(.*)$/,/^(.*)>/,/&nbsp;/]
     SEPERATOR = '_@@@_'
 
-    include Internationalize::ExtractorBase
+    include Internationalize::Base
     
     protected 
     def values_in_line(line)

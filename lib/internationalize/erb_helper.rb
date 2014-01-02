@@ -1,8 +1,8 @@
 module Internationalize
-  class ErbHelperExtractor
+  class ErbHelper
     LABEL_IN_HELPER_PATTERN =  %w{label_tag link_to field_set_tag submit_tag button_to}.map{|h| /#{h}[\s\w_]*('|")([\w ]*)(\1)/ }
 
-    include Internationalize::ExtractorBase
+    include Internationalize::Base
     
     protected 
     def values_in_line(line)

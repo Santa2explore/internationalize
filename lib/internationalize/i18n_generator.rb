@@ -1,6 +1,6 @@
 module Internationalize
   class I18nGenerator
-    EXTRACTORS = [ErbHelperExtractor,HtmlTextExtractor,HtmlAttrExtractor]
+    EXTRACTORS = [ErbHelper,HtmlTextExtractor,HtmlAttrExtractor]
     PATH_PATTERN = /\/views\/(.*)/
     
     def self.execute(opt)
@@ -29,10 +29,10 @@ module Internationalize
         end
       end
       @ext = opt['extension'] || '.html.erb'
-      ExtractorBase.use_dot(true) if opt['dot']
+      Base.use_dot(true) if opt['dot']
       if opt['keymap']
         files_content = opt['keymap'].split(':').map{|f| File.read(f)}
-				Internationalize::ExtractorBase.key_mapper = KeyMapper.new(*files_content)
+				Internationalize::Base.key_mapper = KeyMapper.new(*files_content)
       end
       
     end

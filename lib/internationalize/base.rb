@@ -1,7 +1,7 @@
 require 'stringio'
 
 module Internationalize
-	module ExtractorBase
+	module Base
 
 		def self.use_dot(on_off)
 			@use_dot = on_off
@@ -33,14 +33,14 @@ module Internationalize
 		end
 		def to_key(s)
 			val = to_value(s)
-			result = (ExtractorBase.key_mapper) ? ExtractorBase.key_mapper.key_for(val) : val.scan(/\w+/).join('_').downcase
+			result = (Base.key_mapper) ? Base.key_mapper.key_for(val) : val.scan(/\w+/).join('_').downcase
 			key_prefix ? "#{key_prefix}_#{result}" : result
 		end
 		def can_replace?(e)
 			e.strip.size > 1
 		end
 		def t_method(val,wrap=false)
-			m = ExtractorBase.use_dot? ? "t('.#{to_key(val)}')" : "t(:#{to_key(val)})"
+			m = Base.use_dot? ? "t('.#{to_key(val)}')" : "t(:#{to_key(val)})"
 			wrap ? "<%=#{m}%>" : m
 		end
 	end
