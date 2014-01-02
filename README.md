@@ -1,6 +1,14 @@
 # Internationalize
 
-TODO: Write a gem description
+ # Build Under Process, Note: Dont Download and Use.
+Internationalize is a ruby library for transfering your local
+Rails (-version > 3.0 ) project to an I18n format.
+
+It will automatically extract hard-coded text from your ERB view file,
+then choose a proper key and replace them with the I18n.translate method.
+
+Basic Command Line Usage:
+  internationalize <path_to_project_dir> [target path]
 
 ## Installation
 
