@@ -1,6 +1,8 @@
 # Internationalize
 
- # Build Under Process, Note: Dont Download and Use.
+# Build Under Process, Note: Dont Download and Use.
+
+## DESCRIPTION
 Internationalize is a ruby library for transfering your local
 Rails (-version > 3.0 ) project to an I18n format.
 
