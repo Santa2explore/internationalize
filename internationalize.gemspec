@@ -6,8 +6,8 @@ require 'internationalize/version'
 Gem::Specification.new do |spec|
   spec.name          = "internationalize"
   spec.version       = Internationalize::VERSION
-  spec.authors       = ["Santosh Mohanty,Abhisehk Somani, Amit Chavda,Urjit Rajgor, Reena Mary,Ajay Arsud, Nimisha Sharad"]
-  spec.email         = ["santa.jyp@gmail.com.com,jimmythakkar007@gmail.com"]
+  spec.authors       = ["Santosh Mohanty,Radhe Rajput,Abhishek Somani, Amit Chavda,Urjit Rajgor, Reena Mary,Ajay Arsud, Nimisha Sharad"]
+  spec.email         = ["santa.jyp@gmail.com,jimmythakkar007@gmail.com"]
   spec.description   = %q{Ruby library for Internationalizing Erb Tags.}
   spec.summary       = %q{Ruby library for Internationalizing Erb Tags.}
   spec.homepage      = ""

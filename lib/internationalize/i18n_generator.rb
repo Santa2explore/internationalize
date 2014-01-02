@@ -3,7 +3,7 @@ module Internationalize
     EXTRACTORS = [ErbHelperExtractor,HtmlTextExtractor,HtmlAttrExtractor]
     PATH_PATTERN = /\/views\/(.*)/
     
-    def self.excute(opt)      
+    def self.execute(opt)
       setupOptions(opt)
       Dir.glob(File.join(@src_path,"**#{File::SEPARATOR}*#{@ext}")).each do |f|
         path = f.match(PATH_PATTERN)[1].gsub(/#{@ext}$/,'').split '/' if opt['dot'] && f =~ PATH_PATTERN

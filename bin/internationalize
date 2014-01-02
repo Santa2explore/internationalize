@@ -68,4 +68,4 @@ case ARGV.size
 end
  
 # Run the i18n generating
-Internationalize::I18nGenerator.excute(options)
+Internationalize::I18nGenerator.execute(options)
