@@ -67,5 +67,5 @@ case ARGV.size
     error_parameter
 end
  
-# Run the i18n generating
+# Run the i18n generator for Including Rails Routes & Action View Template
 Internationalize::I18nGenerator.execute(options)
